@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | McKay Photography | Stories & Legacies</title>
+    <meta name="description" content="Explore selected portrait sessions by McKay Photography. Read the brief stories behind the frames of our high school seniors, family legacy gatherings, and lifestyle sessions.">
+    
+    <meta property="og:title" content="Portfolio | McKay Photography">
+    <meta property="og:description" content="A collection of honest, timeless portrait sessions and the unique stories behind them.">
+    <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        editorial: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['"Source Sans 3"', 'sans-serif'],
+                    },
+                    colors: {
+                        'warm-linen': '#F6F3EE',
+                        'deep-forest': '#1C2621',
+                        'soft-charcoal': '#242424',
+                        'muted-gold': '#A98F64',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .scroll-reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-warm-linen text-soft-charcoal font-sans antialiased">
+
+    <header class="fixed top-0 left-0 w-full backdrop-blur-md bg-warm-linen/80 border-b border-soft-charcoal/5 z-50">
+        <nav class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center relative z-50 bg-warm-linen/10">
+            <a href="../index.html" class="text-xl md:text-2xl font-editorial tracking-[0.2em] font-medium text-deep-forest">McKAY PHOTOGRAPHY</a>
+            
+            <ul class="hidden md:flex space-x-10 text-xs font-medium tracking-[0.25em] uppercase text-soft-charcoal/80">
+                <li><a href="../index.html" class="transition-colors duration-300 hover:text-deep-forest">Home</a></li>
+                <li><a href="index.html" class="text-deep-forest border-b border-deep-forest/40 pb-1">Portfolio</a></li>
+                <li><a href="../Experience/index.html" class="transition-colors duration-300 hover:text-deep-forest">The Experience</a></li>
+                <li><a href="../About/index.html" class="transition-colors duration-300 hover:text-deep-forest">About Dave</a></li>
+                <li><a href="../Contact/index.html" class="transition-colors duration-300 hover:text-deep-forest">Contact</a></li>
+            </ul>
+
+            <button id="menu-btn" class="flex md:hidden items-center justify-center w-12 h-12 text-deep-forest focus:outline-none" aria-label="Toggle Navigation Menu">
+                <div class="w-6 h-5 flex flex-col justify-between relative transform transition-all duration-300">
+                    <span id="bar-top" class="w-full h-[1.5px] bg-deep-forest transform transition-all duration-300 origin-left"></span>
+                    <span id="bar-mid" class="w-full h-[1.5px] bg-deep-forest transition-all duration-300"></span>
+                    <span id="bar-bot" class="w-full h-[1.5px] bg-deep-forest transform transition-all duration-300 origin-left"></span>
+                </div>
+            </button>
+        </nav>
+
+        <div id="mobile-menu" class="absolute top-full left-0 w-full bg-deep-forest/95 backdrop-blur-lg border-b border-white/5 opacity-0 pointer-events-none transform -translate-y-4 transition-all duration-300 ease-out z-40 shadow-xl md:hidden">
+            <ul class="flex flex-col space-y-5 px-6 py-8 text-left text-sm font-medium tracking-[0.25em] uppercase text-white/90">
+                <li><a href="../index.html" class="mobile-link py-1.5 block border-b border-white/5 hover:text-muted-gold transition-colors">Home</a></li>
+                <li><a href="index.html" class="mobile-link py-1.5 block border-b border-white/5 text-muted-gold font-bold tracking-[0.3em]">Portfolio</a></li>
+                <li><a href="../Experience/index.html" class="mobile-link py-1.5 block border-b border-white/5 hover:text-muted-gold transition-colors">The Experience</a></li>
+                <li><a href="../About/index.html" class="mobile-link py-1.5 block border-b border-white/5 hover:text-muted-gold transition-colors">About Dave</a></li>
+                <li><a href="../Contact/index.html" class="mobile-link py-1.5 block hover:text-muted-gold transition-colors">Contact</a></li>
+            </ul>
+        </div>
+
+        <div id="menu-overlay" class="fixed inset-0 bg-soft-charcoal/40 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 ease-in-out z-30 md:hidden"></div>
+    </header>
+
+    <main class="pt-24 pb-12">
+        <section class="max-w-7xl mx-auto px-6 pt-10 pb-12 text-left scroll-reveal active">
+            <span class="text-xs uppercase tracking-[0.4em] text-muted-gold font-semibold block mb-3">Selected Works</span>
+            <h1 class="text-4xl md:text-6xl font-editorial font-light text-deep-forest">Featured Galleries & Stories</h1>
+        </section>
+
+        <!-- Clara Gallery Section -->
+        <section class="max-w-7xl mx-auto px-6 py-12 border-t border-soft-charcoal/10 scroll-reveal">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+                <div class="lg:col-span-4 space-y-4">
+                    <div>
+                        <span class="text-xs uppercase tracking-[0.2em] text-muted-gold font-medium block">Class of 2026</span>
+                        <h2 class="text-3xl font-editorial text-deep-forest font-medium">Morgan: Intentional Spaces</h2>
+                    </div>
+                    <p class="text-sm md:text-base text-soft-charcoal/80 font-light leading-relaxed">
+                        Clara wanted her high school senior portraits to feel distinctly cinematic rather than formatted. We skipped the standard local parks and shot near an architectural mid-century concrete structure right at twilight.
+                    </p>
+                    <div class="text-[11px] text-soft-charcoal/40 tracking-wider uppercase font-semibold">
+                        <span>Location: Urban Overlook</span>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-8">
+                    <div class="relative overflow-hidden w-full">
+                        <!-- Soft Gradient Vignette Overlays -->
+                        <div class="absolute left-0 top-0 bottom-0 w-16 md:w-40 bg-gradient-to-r from-warm-linen via-warm-linen/40 to-transparent z-10 pointer-events-none"></div>
+                        <div class="absolute right-0 top-0 bottom-0 w-16 md:w-40 bg-gradient-to-l from-warm-linen via-warm-linen/40 to-transparent z-10 pointer-events-none"></div>
+
+                        <!-- Fluid Drag Carousel Track -->
+                        <div id="carousel-clara" class="drag-carousel flex overflow-x-auto hide-scrollbar gap-8 items-center cursor-grab active:cursor-grabbing select-none py-2">
+                            <!-- Left Structural Air Buffer -->
+                            <div class="shrink-0 w-[30vw] md:w-[35vw] h-4 pointer-events-none"></div>
+                            
+                            <!-- Gallery Assets -->
+                            <div class="carousel-item shrink-0 h-[350px] md:h-[450px] w-auto bg-stone-100 rounded-sm overflow-hidden shadow-sm">
+                                <img src="../images/Morgan2.jpg" alt="Clara senior portrait" class="h-full w-auto object-contain pointer-events-none">
+                            </div>
+                            <div class="carousel-item shrink-0 h-[350px] md:h-[450px] w-auto bg-stone-100 rounded-sm overflow-hidden shadow-sm">
+                                <img src="../images/Morgan1.jpg" loading="lazy" alt="Clara senior portrait slide 2" class="h-full w-auto object-contain pointer-events-none">
+                            </div>
+                            <div class="carousel-item shrink-0 h-[350px] md:h-[450px] w-auto bg-stone-100 rounded-sm overflow-hidden shadow-sm">
+                                <img src="../images/Morgan4.jpg" loading="lazy" alt="Clara senior portrait slide 3" class="h-full w-auto object-contain pointer-events-none">
+                            </div>
+                            <div class="carousel-item shrink-0 h-[350px] md:h-[450px] w-auto bg-stone-100 rounded-sm overflow-hidden shadow-sm">
+                                <img src="../images/Morgan3.jpg" loading="lazy" alt="Clara senior portrait slide 3" class="h-full w-auto object-contain pointer-events-none">
+                            </div>
+
+                            <!-- Right Structural Air Buffer -->
+                            <div class="shrink-0 w-[30vw] md:w-[35vw] h-4 pointer-events-none"></div>
+                        </div>
+                    </div>
+
+                    <!-- Clean Typographic Interaction Block Outside Mask Boundaries -->
+                    <div class="flex items-center justify-between mt-6 border-t border-soft-charcoal/5 pt-4">
+                        <span class="text-[10px] tracking-[0.2em] uppercase text-soft-charcoal/40 font-medium font-sans hidden sm:inline-block">Drag frame or explore with directions</span>
+                        <div class="flex gap-8 text-[11px] tracking-[0.25em] uppercase font-semibold text-soft-charcoal/70 ml-auto">
+                            <button data-target="carousel-clara" data-dir="prev" class="nav-arrow hover:text-muted-gold transition-colors duration-300 flex items-center gap-2">
+                                <span class="font-light text-xs">&larr;</span> Prev
+                            </button>
+                            <button data-target="carousel-clara" data-dir="next" class="nav-arrow hover:text-muted-gold transition-colors duration-300 flex items-center gap-2">
+                                Next <span class="font-light text-xs">&rarr;</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Arrington Gallery Section -->
+        <section class="max-w-7xl mx-auto px-6 py-12 border-t border-soft-charcoal/10 scroll-reveal">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+                <div class="lg:col-span-4 lg:order-last space-y-4">
+                    <div>
+                        <span class="text-xs uppercase tracking-[0.2em] text-muted-gold font-medium block">Generations</span>
+                        <h2 class="text-3xl font-editorial text-deep-forest font-medium">The Atterbury Children</h2>
+                    </div>
+                    <p class="text-sm md:text-base text-soft-charcoal/80 font-light leading-relaxed">
+                        Gathering three generations into one frame can easily feel chaotic, so we designed this session around a genuine family Sunday dinner on their historic homestead acreage.
+                    </p>
+                    <div class="text-[11px] text-soft-charcoal/40 tracking-wider uppercase font-semibold">
+                        <span>Location: Homestead Private Acreage</span>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-8">
+                    <div class="relative overflow-hidden w-full">
+                        <!-- Soft Gradient Vignette Overlays -->
+                        <div class="absolute left-0 top-0 bottom-0 w-16 md:w-40 bg-gradient-to-r from-warm-linen via-warm-linen/40 to-transparent z-10 pointer-events-none"></div>
+                        <div class="absolute right-0 top-0 bottom-0 w-16 md:w-40 bg-gradient-to-l from-warm-linen via-warm-linen/40 to-transparent z-10 pointer-events-none"></div>
+
+                        <!-- Fluid Drag Carousel Track -->
+                        <div id="carousel-arrington" class="drag-carousel flex overflow-x-auto hide-scrollbar gap-8 items-center cursor-grab active:cursor-grabbing select-none py-2">
+                            <!-- Left Structural Air Buffer -->
+                            <div class="shrink-0 w-[30vw] md:w-[35vw] h-4 pointer-events-none"></div>
+                            
+                            <!-- Gallery Assets -->
+                            <div class="carousel-item shrink-0 h-[350px] md:h-[450px] w-auto bg-stone-100 rounded-sm overflow-hidden shadow-sm">
+                                <img src="../images/Atterbury1.jpg" alt="Arrington family legacy" class="h-full w-auto object-contain pointer-events-none">
+                            </div>
+                            <div class="carousel-item shrink-0 h-[350px] md:h-[450px] w-auto bg-stone-100 rounded-sm overflow-hidden shadow-sm">
+                                <img src="../images/Atterbury2.jpg" loading="lazy" alt="Arrington family slide 2" class="h-full w-auto object-contain pointer-events-none">
+                            </div>
+                            <div class="carousel-item shrink-0 h-[350px] md:h-[450px] w-auto bg-stone-100 rounded-sm overflow-hidden shadow-sm">
+                                <img src="../images/Atterbury3.jpg" loading="lazy" alt="Arrington family slide 2" class="h-full w-auto object-contain pointer-events-none">
+                            </div>
+
+                            <!-- Right Structural Air Buffer -->
+                            <div class="shrink-0 w-[30vw] md:w-[35vw] h-4 pointer-events-none"></div>
+                        </div>
+                    </div>
+
+                    <!-- Clean Typographic Interaction Block Outside Mask Boundaries -->
+                    <div class="flex items-center justify-between mt-6 border-t border-soft-charcoal/5 pt-4">
+                        <span class="text-[10px] tracking-[0.2em] uppercase text-soft-charcoal/40 font-medium font-sans hidden sm:inline-block">Drag frame or explore with directions</span>
+                        <div class="flex gap-8 text-[11px] tracking-[0.25em] uppercase font-semibold text-soft-charcoal/70 mr-auto lg:mr-0 lg:ml-0">
+                            <button data-target="carousel-arrington" data-dir="prev" class="nav-arrow hover:text-muted-gold transition-colors duration-300 flex items-center gap-2">
+                                <span class="font-light text-xs">&larr;</span> Prev
+                            </button>
+                            <button data-target="carousel-arrington" data-dir="next" class="nav-arrow hover:text-muted-gold transition-colors duration-300 flex items-center gap-2">
+                                Next <span class="font-light text-xs">&rarr;</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-warm-linen border-t border-soft-charcoal/10 py-16 text-center">
+        <div class="max-w-4xl mx-auto px-6 flex flex-col items-center gap-8">
+            <span class="text-xs uppercase tracking-[0.3em] text-muted-gold font-semibold">Begin Planning</span>
+            <h2 class="text-3xl font-editorial text-deep-forest font-light italic">Have a story you want preserved?</h2>
+            
+            <a href="../contact.html" class="px-8 py-3.5 bg-deep-forest text-white hover:bg-muted-gold transition-colors duration-500 rounded-sm font-medium tracking-widest uppercase text-xs shadow-md">
+                Connect with Dave
+            </a>
+
+            <div class="flex flex-wrap justify-center gap-x-6 gap-y-3 mt-4 text-xs font-medium tracking-widest uppercase text-soft-charcoal/50 border-t border-soft-charcoal/5 pt-10 w-full">
+                <a href="../index.html" class="hover:text-deep-forest transition-colors duration-300">Home</a>
+                <a href="index.html" class="hover:text-deep-forest transition-colors duration-300 text-deep-forest font-semibold">Portfolio</a>
+                <a href="../experience.html" class="hover:text-deep-forest transition-colors duration-300">The Experience</a>
+                <a href="../about.html" class="hover:text-deep-forest transition-colors duration-300">About Dave</a>
+                <a href="../contact.html" class="hover:text-deep-forest transition-colors duration-300">Contact Studio</a>
+            </div>
+            
+            <p class="text-[10px] tracking-widest text-soft-charcoal/40 uppercase">© 2026 McKay Photography. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Navigation Bar Toggle Configuration
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuOverlay = document.getElementById('menu-overlay');
+            const barTop = document.getElementById('bar-top');
+            const barMid = document.getElementById('bar-mid');
+            const barBot = document.getElementById('bar-bot');
+
+            function toggleMenu() {
+                const isOpen = mobileMenu.classList.contains('opacity-100');
+                if (isOpen) {
+                    mobileMenu.classList.remove('opacity-100', 'pointer-events-auto', 'translate-y-0');
+                    mobileMenu.classList.add('opacity-0', 'pointer-events-none', '-translate-y-4');
+                    menuOverlay.classList.remove('opacity-100', 'pointer-events-auto');
+                    menuOverlay.classList.add('opacity-0', 'pointer-events-none');
+                    document.body.classList.remove('overflow-hidden');
+                    
+                    barTop.classList.remove('rotate-45', 'translate-x-[2px]', 'translate-y-[1px]');
+                    barMid.classList.remove('opacity-0');
+                    barBot.classList.remove('-rotate-45', 'translate-x-[2px]', 'translate-y-[-1px]');
+                } else {
+                    mobileMenu.classList.remove('opacity-0', 'pointer-events-none', '-translate-y-4');
+                    mobileMenu.classList.add('opacity-100', 'pointer-events-auto', 'translate-y-0');
+                    menuOverlay.classList.remove('opacity-0', 'pointer-events-none');
+                    menuOverlay.classList.add('opacity-100', 'pointer-events-auto');
+                    document.body.classList.add('overflow-hidden');
+                    
+                    barTop.classList.add('rotate-45', 'translate-x-[2px]', 'translate-y-[1px]');
+                    barMid.classList.add('opacity-0');
+                    barBot.classList.add('-rotate-45', 'translate-x-[2px]', 'translate-y-[1px]');
+                }
+            }
+
+            menuBtn.addEventListener('click', toggleMenu);
+            menuOverlay.addEventListener('click', toggleMenu);
+            
+            document.querySelectorAll('.mobile-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (mobileMenu.classList.contains('opacity-100')) toggleMenu();
+                });
+            });
+
+            // Scroll Layer Reveal Engine
+            const revealElements = document.querySelectorAll('.scroll-reveal');
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.05 });
+
+            revealElements.forEach(el => revealObserver.observe(el));
+
+            // Premium Custom Eased Floating Scroll Engine
+            function smoothFloatTo(element, targetScroll, duration = 750) {
+                if (duration === 0) {
+                    element.scrollLeft = targetScroll;
+                    return;
+                }
+
+                const startScroll = element.scrollLeft;
+                const change = targetScroll - startScroll;
+                let startTime = null;
+
+                if (element.dataset.animId) cancelAnimationFrame(parseInt(element.dataset.animId));
+
+                function animate(currentTime) {
+                    if (!startTime) startTime = currentTime;
+                    const elapsed = currentTime - startTime;
+                    const progress = Math.min(elapsed / duration, 1);
+                    
+                    // Luxurious cubic ease-out curve for that true "floating" decelerating finish
+                    const easeOutCubic = 1 - Math.pow(1 - progress, 3);
+                    
+                    element.scrollLeft = startScroll + change * easeOutCubic;
+
+                    if (elapsed < duration) {
+                        element.dataset.animId = requestAnimationFrame(animate);
+                    } else {
+                        element.removeAttribute('data-animId');
+                    }
+                }
+                element.dataset.animId = requestAnimationFrame(animate);
+            }
+
+            // Calculations for True Element-Based Centering & Clamping
+            function getClosestItemIndex(carousel, items) {
+                const centerPoint = carousel.scrollLeft + (carousel.offsetWidth / 2);
+                let targetedIndex = 0;
+                let minimumDistance = Infinity;
+
+                items.forEach((item, index) => {
+                    const itemCenter = item.offsetLeft + (item.offsetWidth / 2);
+                    const distance = Math.abs(itemCenter - centerPoint);
+                    if (distance < minimumDistance) {
+                        minimumDistance = distance;
+                        targetedIndex = index;
+                    }
+                });
+                return targetedIndex;
+            }
+
+            function floatToIndex(carousel, items, index, duration = 800) {
+                // strict bound check to completely prevent sliding off into visual spacers
+                if (index < 0 || index >= items.length) return; 
+                
+                const targetItem = items[index];
+                const targetCenter = targetItem.offsetLeft + (targetItem.offsetWidth / 2);
+                const optimalScrollLeft = targetCenter - (carousel.offsetWidth / 2);
+                
+                smoothFloatTo(carousel, optimalScrollLeft, duration);
+            }
+
+            // Click-and-Drag Setup across Track nodes
+            const carousels = document.querySelectorAll('.drag-carousel');
+            
+            // Global Initialization function to perfectly center the first image item[0]
+            function snapToFirstFrames(duration = 0) {
+                carousels.forEach(carousel => {
+                    const items = carousel.querySelectorAll('.carousel-item');
+                    if (items.length > 0) {
+                        floatToIndex(carousel, items, 0, duration);
+                    }
+                });
+            }
+
+            // Execute immediate initial snap alignment
+            snapToFirstFrames(0);
+            
+            // Re-verify layouts when assets load or window scaling shifts properties
+            window.addEventListener('load', () => snapToFirstFrames(0));
+            window.addEventListener('resize', () => snapToFirstFrames(0));
+            
+            carousels.forEach(carousel => {
+                let isDragging = false;
+                let startX;
+                let baseScrollLeft;
+                const items = carousel.querySelectorAll('.carousel-item');
+
+                carousel.addEventListener('mousedown', (e) => {
+                    isDragging = true;
+                    if (carousel.dataset.animId) cancelAnimationFrame(parseInt(carousel.dataset.animId));
+                    startX = e.pageX - carousel.offsetLeft;
+                    baseScrollLeft = carousel.scrollLeft;
+                });
+
+                function terminateDrag() {
+                    if (!isDragging) return;
+                    isDragging = false;
+                    const idealTargetIndex = getClosestItemIndex(carousel, items);
+                    floatToIndex(carousel, items, idealTargetIndex, 800);
+                }
+
+                carousel.addEventListener('mouseleave', terminateDrag);
+                carousel.addEventListener('mouseup', terminateDrag);
+
+                carousel.addEventListener('mousemove', (e) => {
+                    if (!isDragging) return;
+                    e.preventDefault();
+                    const currentX = e.pageX - carousel.offsetLeft;
+                    const deltaX = (currentX - startX) * 1.5; // Drag sensitivity constant
+                    carousel.scrollLeft = baseScrollLeft - deltaX;
+                });
+            });
+
+            // Clamped Typographic Navigation Triggers
+            document.querySelectorAll('.nav-arrow').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const trackId = this.getAttribute('data-target');
+                    const direction = this.getAttribute('data-dir');
+                    const carousel = document.getElementById(trackId);
+                    const items = carousel.querySelectorAll('.carousel-item');
+                    
+                    const activeIndex = getClosestItemIndex(carousel, items);
+                    let destinationIndex = direction === 'next' ? activeIndex + 1 : activeIndex - 1;
+                    
+                    // Stop execution at boundary limits to ensure no blank spaces appear
+                    if (destinationIndex >= 0 && destinationIndex < items.length) {
+                        floatToIndex(carousel, items, destinationIndex, 800);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

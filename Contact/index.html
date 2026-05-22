@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Booking | McKay Photography</title>
+    <meta name="description" content="Secure your portrait session timeline with McKay Photography. View session pricing options and book your calendar date instantly.">
+    
+    <meta property="og:title" content="Contact & Booking | McKay Photography">
+    <meta property="og:description" content="Select a portrait experience and reserve your date via our integrated studio calendar.">
+    <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        editorial: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['"Source Sans 3"', 'sans-serif'],
+                    },
+                    colors: {
+                        'warm-linen': '#F6F3EE',
+                        'deep-forest': '#1C2621',
+                        'soft-charcoal': '#242424',
+                        'muted-gold': '#A98F64',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .scroll-reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-warm-linen text-soft-charcoal font-sans antialiased">
+
+    <header class="fixed top-0 left-0 w-full backdrop-blur-md bg-warm-linen/90 border-b border-soft-charcoal/5 z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center relative z-50 bg-warm-linen/10">
+            <a href="../index.html" class="text-lg sm:text-xl font-editorial tracking-[0.2em] font-medium text-deep-forest">McKAY PHOTOGRAPHY</a>
+            
+            <ul class="hidden md:flex space-x-8 text-xs font-medium tracking-[0.25em] uppercase text-soft-charcoal/80">
+                <li><a href="../index.html" class="hover:text-deep-forest transition-colors duration-300">Home</a></li>
+                <li><a href="../Portfolio/index.html" class="hover:text-deep-forest transition-colors duration-300">Portfolio</a></li>
+                <li><a href="../Experience/index.html" class="hover:text-deep-forest transition-colors duration-300">The Experience</a></li>
+                <li><a href="../About/index.html" class="hover:text-deep-forest transition-colors duration-300">About Dave</a></li>
+                <li><a href="index.html" class="text-deep-forest border-b border-deep-forest/40 pb-1">Contact</a></li>
+            </ul>
+
+            <button id="menu-btn" class="flex md:hidden items-center justify-center w-12 h-12 text-deep-forest focus:outline-none" aria-label="Toggle Navigation Menu">
+                <div class="w-6 h-5 flex flex-col justify-between relative transform transition-all duration-300">
+                    <span id="bar-top" class="w-full h-[1.5px] bg-deep-forest transform transition-all duration-300 origin-left"></span>
+                    <span id="bar-mid" class="w-full h-[1.5px] bg-deep-forest transition-all duration-300"></span>
+                    <span id="bar-bot" class="w-full h-[1.5px] bg-deep-forest transform transition-all duration-300 origin-left"></span>
+                </div>
+            </button>
+        </nav>
+
+        <div id="mobile-menu" class="absolute top-full left-0 w-full bg-deep-forest/95 backdrop-blur-lg border-b border-white/5 opacity-0 pointer-events-none transform -translate-y-4 transition-all duration-300 ease-out z-40 shadow-xl">
+            <ul class="flex flex-col space-y-5 px-6 py-8 text-left text-sm font-medium tracking-[0.25em] uppercase text-white/90">
+                <li><a href="../index.html" class="mobile-link py-1.5 block border-b border-white/5 hover:text-muted-gold transition-colors">Home</a></li>
+                <li><a href="../Portfolio/index.html" class="mobile-link py-1.5 block border-b border-white/5 hover:text-muted-gold transition-colors">Portfolio</a></li>
+                <li><a href="../Experience/index.html" class="mobile-link py-1.5 block border-b border-white/5 hover:text-muted-gold transition-colors">The Experience</a></li>
+                <li><a href="../About/index.html" class="mobile-link py-1.5 block border-b border-white/5 hover:text-muted-gold transition-colors">About Dave</a></li>
+                <li><a href="index.html" class="mobile-link py-1.5 block text-muted-gold font-bold tracking-[0.3em]">Contact</a></li>
+            </ul>
+        </div>
+
+        <div id="menu-overlay" class="fixed inset-0 top-[60px] h-[calc(100vh-60px)] w-screen bg-soft-charcoal/40 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 ease-in-out z-30"></div>
+    </header>
+
+    <main class="pt-24 pb-12">
+        <section class="max-w-7xl mx-auto px-6 pt-10 pb-6 text-left scroll-reveal active">
+            <span class="text-xs uppercase tracking-[0.4em] text-muted-gold font-semibold block mb-3">Reserve a Session</span>
+            <h1 class="text-3xl md:text-6xl font-editorial font-light text-deep-forest">Claim Your Timeline</h1>
+        </section>
+
+        <section class="max-w-7xl mx-auto px-6 py-6 border-t border-soft-charcoal/10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+                
+                <div class="lg:col-span-5 space-y-10 scroll-reveal">
+                    <div>
+                        <h2 class="text-xl font-editorial text-deep-forest font-medium uppercase tracking-wider mb-2">Investment Guide</h2>
+                        <p class="text-sm text-soft-charcoal/70 font-light leading-relaxed">
+                            Select your desired experience block on the digital calendar. All standard final collections include fully hand-retouched high-resolution digital files with print release permissions.
+                        </p>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="p-5 bg-white/40 border border-soft-charcoal/5 rounded-sm transition-all duration-300 hover:border-muted-gold/30">
+                            <div class="flex justify-between items-baseline mb-2">
+                                <h3 class="font-editorial text-lg font-medium text-deep-forest">High School Seniors</h3>
+                                <span class="text-xs font-semibold tracking-wider uppercase text-muted-gold">$450 - $650</span>
+                            </div>
+                            <p class="text-sm text-soft-charcoal/70 font-light leading-relaxed">
+                                Includes multiple outfit transitions, localized location scouting, and character-first individual framing. Best for establishing milestone portfolios.
+                            </p>
+                        </div>
+
+                        <div class="p-5 bg-white/40 border border-soft-charcoal/5 rounded-sm transition-all duration-300 hover:border-muted-gold/30">
+                            <div class="flex justify-between items-baseline mb-2">
+                                <h3 class="font-editorial text-lg font-medium text-deep-forest">Family Legacies</h3>
+                                <span class="text-xs font-semibold tracking-wider uppercase text-muted-gold">$600 - $900</span>
+                            </div>
+                            <p class="text-sm text-soft-charcoal/70 font-light leading-relaxed">
+                                Geared for multi-generational gatherings and legacy connection portraits. Styled unhurriedly around raw homestead actions or scenic outdoor horizons.
+                            </p>
+                        </div>
+
+                        <div class="p-5 bg-white/40 border border-soft-charcoal/5 rounded-sm transition-all duration-300 hover:border-muted-gold/30">
+                            <div class="flex justify-between items-baseline mb-2">
+                                <h3 class="font-editorial text-lg font-medium text-deep-forest">Lifestyle Portraits</h3>
+                                <span class="text-xs font-semibold tracking-wider uppercase text-muted-gold">$350 - $500</span>
+                            </div>
+                            <p class="text-sm text-soft-charcoal/70 font-light leading-relaxed">
+                                Intimate, honest frames capturing raw slice-of-life creative blocks or natural milestones in completely ambient environments.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blended Interface Canvas Viewport -->
+                <div class="lg:col-span-7 scroll-reveal">
+                    <div class="w-full bg-warm-linen border border-soft-charcoal/10 rounded-sm shadow-sm overflow-hidden min-h-[950px] hide-scrollbar">
+                        <!-- Calendly inline widget begin -->
+                        <div class="calendly-inline-widget" data-url="https://calendly.com/mckayphotog?hide_gdpr_banner=1&background_color=F6F3EE&primary_color=44794b" style="min-width:320px;height:950px;"></div>
+                        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                        <!-- Calendly inline widget end -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="max-w-7xl mx-auto px-6 pt-16 pb-8 border-t border-soft-charcoal/10 scroll-reveal">
+            <div class="text-center md:text-left mb-8">
+                <span class="text-xs uppercase tracking-[0.3em] text-muted-gold font-semibold block mb-1">Direct Channels</span>
+                <h2 class="text-2xl font-editorial text-deep-forest">Connect with the Studio</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8 text-center md:text-left">
+                <div class="space-y-1">
+                    <p class="text-[10px] uppercase tracking-[0.25em] font-bold text-soft-charcoal/40">Studio Email</p>
+                    <a href="mailto:dave@mckayphotography.com" class="text-sm font-medium text-deep-forest hover:text-muted-gold border-b border-transparent hover:border-muted-gold/30 pb-0.5 block transition-all duration-300 overflow-hidden text-ellipsis whitespace-nowrap">dave@mckayphotography.com</a>
+                </div>
+
+                <div class="space-y-1">
+                    <p class="text-[10px] uppercase tracking-[0.25em] font-bold text-soft-charcoal/40">Direct Phone</p>
+                    <a href="tel:+18015550192" class="text-sm font-medium text-deep-forest hover:text-muted-gold border-b border-transparent hover:border-muted-gold/30 pb-0.5 block transition-all duration-300">(801) 555-0192</a>
+                </div>
+
+                <div class="space-y-1">
+                    <p class="text-[10px] uppercase tracking-[0.25em] font-bold text-soft-charcoal/40">Instagram</p>
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-deep-forest hover:text-muted-gold border-b border-transparent hover:border-muted-gold/30 pb-0.5 block transition-all duration-300">@mckay.portraits</a>
+                </div>
+
+                <div class="space-y-1">
+                    <p class="text-[10px] uppercase tracking-[0.25em] font-bold text-soft-charcoal/40">LinkedIn</p>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-deep-forest hover:text-muted-gold border-b border-transparent hover:border-muted-gold/30 pb-0.5 block transition-all duration-300">linkedin.com/in/dave-mckay</a>
+                </div>
+
+                <div class="space-y-1">
+                    <p class="text-[10px] uppercase tracking-[0.25em] font-bold text-soft-charcoal/40">Facebook</p>
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-deep-forest hover:text-muted-gold border-b border-transparent hover:border-muted-gold/30 pb-0.5 block transition-all duration-300">facebook.com/mckayphoto</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-warm-linen border-t border-soft-charcoal/5 py-12 text-center">
+        <div class="max-w-4xl mx-auto px-6 flex flex-col items-center gap-6">
+            <div class="flex flex-wrap justify-center gap-x-6 gap-y-3 text-xs font-medium tracking-widest uppercase text-soft-charcoal/50 w-full">
+                <a href="../index.html" class="hover:text-deep-forest transition-colors duration-300">Home</a>
+                <a href="../Portfolio/index.html" class="hover:text-deep-forest transition-colors duration-300">Portfolio</a>
+                <a href="../Experience/index.html" class="hover:text-deep-forest transition-colors duration-300">The Experience</a>
+                <a href="../About/index.html" class="hover:text-deep-forest transition-colors duration-300">About Dave</a>
+                <a href="index.html" class="hover:text-deep-forest transition-colors duration-300 text-deep-forest font-semibold">Contact Studio</a>
+            </div>
+            <p class="text-[10px] tracking-widest text-soft-charcoal/40 uppercase">© 2026 McKay Photography. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuOverlay = document.getElementById('menu-overlay');
+            const barTop = document.getElementById('bar-top');
+            const barMid = document.getElementById('bar-mid');
+            const barBot = document.getElementById('bar-bot');
+
+            function toggleMenu() {
+                const isOpen = mobileMenu.classList.contains('opacity-100');
+                if (isOpen) {
+                    mobileMenu.classList.remove('opacity-100', 'pointer-events-auto', 'translate-y-0');
+                    mobileMenu.classList.add('opacity-0', 'pointer-events-none', '-translate-y-4');
+                    menuOverlay.classList.remove('opacity-100', 'pointer-events-auto');
+                    menuOverlay.classList.add('opacity-0', 'pointer-events-none');
+                    document.body.classList.remove('overflow-hidden');
+                    
+                    barTop.classList.remove('rotate-45', 'translate-x-[2px]', 'translate-y-[1px]');
+                    barMid.classList.remove('opacity-0');
+                    barBot.classList.remove('-rotate-45', 'translate-x-[2px]', 'translate-y-[-1px]');
+                } else {
+                    mobileMenu.classList.remove('opacity-0', 'pointer-events-none', '-translate-y-4');
+                    mobileMenu.classList.add('opacity-100', 'pointer-events-auto', 'translate-y-0');
+                    menuOverlay.classList.remove('opacity-0', 'pointer-events-none');
+                    menuOverlay.classList.add('opacity-100', 'pointer-events-auto');
+                    document.body.classList.add('overflow-hidden');
+                    
+                    barTop.classList.add('rotate-45', 'translate-x-[2px]', 'translate-y-[1px]');
+                    barMid.classList.add('opacity-0');
+                    barBot.classList.add('-rotate-45', 'translate-x-[2px]', 'translate-y-[1px]');
+                }
+            }
+
+            menuBtn.addEventListener('click', toggleMenu);
+            menuOverlay.addEventListener('click', toggleMenu);
+            
+            document.querySelectorAll('.mobile-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (mobileMenu.classList.contains('opacity-100')) toggleMenu();
+                });
+            });
+
+            const revealElements = document.querySelectorAll('.scroll-reveal');
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.02 });
+
+            revealElements.forEach(el => revealObserver.observe(el));
+        });
+    </script>
+</body>
+</html>

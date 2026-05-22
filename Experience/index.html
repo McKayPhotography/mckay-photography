@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Experience | McKay Photography</title>
+    <meta name="description" content="Discover the intentional process behind a portrait session with McKay Photography. From creative consultation to final gallery curation, learn what to expect.">
+    
+    <meta property="og:title" content="The Experience | McKay Photography">
+    <meta property="og:description" content="An unhurried, intentional approach to capturing your family legacy and milestones.">
+    <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        editorial: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['"Source Sans 3"', 'sans-serif'],
+                    },
+                    colors: {
+                        'warm-linen': '#F6F3EE',
+                        'deep-forest': '#1C2621',
+                        'soft-charcoal': '#242424',
+                        'muted-gold': '#A98F64',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .scroll-reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-warm-linen text-soft-charcoal font-sans antialiased">
+
+    <header class="fixed top-0 left-0 w-full backdrop-blur-md bg-warm-linen/90 border-b border-soft-charcoal/5 z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center relative z-50 bg-warm-linen/10">
+            <a href="../index.html" class="text-lg sm:text-xl font-editorial tracking-[0.2em] font-medium text-deep-forest">McKAY PHOTOGRAPHY</a>
+            
+            <ul class="hidden md:flex space-x-8 text-xs font-medium tracking-[0.25em] uppercase text-soft-charcoal/80">
+                <li><a href="../index.html" class="hover:text-deep-forest transition-colors duration-300">Home</a></li>
+                <li><a href="../Portfolio/index.html" class="hover:text-deep-forest transition-colors duration-300">Portfolio</a></li>
+                <li><a href="index.html" class="text-deep-forest border-b border-deep-forest/40 pb-1">The Experience</a></li>
+                <li><a href="../About/index.html" class="hover:text-deep-forest transition-colors duration-300">About Dave</a></li>
+                <li><a href="../Contact/index.html" class="hover:text-deep-forest transition-colors duration-300">Contact</a></li>
+            </ul>
+
+            <button id="menu-btn" class="flex md:hidden items-center justify-center w-12 h-12 text-deep-forest focus:outline-none" aria-label="Toggle Navigation Menu">
+                <div class="w-6 h-5 flex flex-col justify-between relative transform transition-all duration-300">
+                    <span id="bar-top" class="w-full h-[1.5px] bg-deep-forest transform transition-all duration-300 origin-left"></span>
+                    <span id="bar-mid" class="w-full h-[1.5px] bg-deep-forest transition-all duration-300"></span>
+                    <span id="bar-bot" class="w-full h-[1.5px] bg-deep-forest transform transition-all duration-300 origin-left"></span>
+                </div>
+            </button>
+        </nav>
+
+        <div id="mobile-menu" class="absolute top-full left-0 w-full bg-deep-forest/95 backdrop-blur-lg border-b border-white/5 opacity-0 pointer-events-none transform -translate-y-4 transition-all duration-300 ease-out z-40 shadow-xl">
+            <ul class="flex flex-col space-y-5 px-6 py-8 text-left text-sm font-medium tracking-[0.25em] uppercase text-white/90">
+                <li><a href="../index.html" class="mobile-link py-1.5 block border-b border-white/5 hover:text-muted-gold transition-colors">Home</a></li>
+                <li><a href="../Portfolio/index.html" class="mobile-link py-1.5 block border-b border-white/5 hover:text-muted-gold transition-colors">Portfolio</a></li>
+                <li><a href="index.html" class="mobile-link py-1.5 block border-b border-white/5 text-muted-gold font-bold tracking-[0.3em]">The Experience</a></li>
+                <li><a href="../About/index.html" class="mobile-link py-1.5 block border-b border-white/5 hover:text-muted-gold transition-colors">About Dave</a></li>
+                <li><a href="../Contact/index.html" class="mobile-link py-1.5 block hover:text-muted-gold transition-colors">Contact</a></li>
+            </ul>
+        </div>
+
+        <div id="menu-overlay" class="fixed inset-0 top-[60px] h-[calc(100vh-60px)] w-screen bg-soft-charcoal/40 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 ease-in-out z-30"></div>
+    </header>
+
+    <main class="pt-24 pb-12">
+        <section class="max-w-4xl mx-auto px-6 pt-12 pb-16 md:py-24 text-center scroll-reveal active">
+            <span class="text-xs uppercase tracking-[0.4em] text-muted-gold font-semibold block mb-4">The Approach</span>
+            <h1 class="text-3xl md:text-6xl font-editorial font-light text-deep-forest leading-[1.15] mb-6">An unhurried space built for authenticity.</h1>
+            <p class="text-sm md:text-lg font-light leading-relaxed text-soft-charcoal/80 max-w-2xl mx-auto">
+                Great portraiture cannot be rushed or forced into a cookie-cutter mold. The goal is to strip away the awkward stiffness of traditional photography sessions, creating an environment where your real story can surface naturally.
+            </p>
+        </section>
+
+        <section class="max-w-7xl mx-auto px-6 py-12 border-t border-soft-charcoal/10">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-8 items-start">
+                
+                <div class="space-y-4 scroll-reveal">
+                    <div class="flex items-baseline gap-4">
+                        <span class="font-editorial text-4xl md:text-5xl italic text-muted-gold font-light">01</span>
+                        <h2 class="text-xl md:text-2xl font-editorial text-deep-forest font-medium tracking-wide">The Consultation</h2>
+                    </div>
+                    <div class="w-full h-[220px] rounded-sm bg-stone-200 overflow-hidden shadow-sm">
+                        <img src="../images/Dave4.jpg" alt="Planning session details" class="w-full h-full object-cover">
+                    </div>
+                    <p class="text-sm text-soft-charcoal/85 font-light leading-relaxed">
+                        Before a single frame is shot, we jump on a brief discovery call or sit down over coffee to map out the direction. We’ll discuss the creative tone, coordinate wardrobe textures that complement your aesthetic, and select a location that holds genuine meaning for you or your family.
+                    </p>
+                </div>
+
+                <div class="space-y-4 scroll-reveal">
+                    <div class="flex items-baseline gap-4">
+                        <span class="font-editorial text-4xl md:text-5xl italic text-muted-gold font-light">02</span>
+                        <h2 class="text-xl md:text-2xl font-editorial text-deep-forest font-medium tracking-wide">The Session Day</h2>
+                    </div>
+                    <div class="w-full h-[220px] rounded-sm bg-stone-200 overflow-hidden shadow-sm">
+                        <img src="../images/Dave5.jpg" alt="Live portrait session behind the scenes" class="w-full h-full object-cover">
+                    </div>
+                    <p class="text-sm text-soft-charcoal/85 font-light leading-relaxed">
+                        No rigid posing guides or countdowns. Sessions are paced intentionally to allow everyone space to loosen up. By leaning into natural prompts, interactive dynamics, and documentary direction, the resulting frames capture honest expressions over manufactured smiles.
+                    </p>
+                </div>
+
+                <div class="space-y-4 scroll-reveal">
+                    <div class="flex items-baseline gap-4">
+                        <span class="font-editorial text-4xl md:text-5xl italic text-muted-gold font-light">03</span>
+                        <h2 class="text-xl md:text-2xl font-editorial text-deep-forest font-medium tracking-wide">Curation & Delivery</h2>
+                    </div>
+                    <div class="w-full h-[220px] rounded-sm bg-stone-200 overflow-hidden shadow-sm">
+                        <img src="../images/Dave6.jpg" alt="Final gallery presentation review" class="w-full h-full object-cover">
+                    </div>
+                    <p class="text-sm text-soft-charcoal/85 font-light leading-relaxed">
+                        Every image selected for your collection undergoes a meticulous, hand-crafted post-production process. We lean into warm, true-to-life tones and editorial color-grading that ensures your visual archive stands the test of time, delivered via a private digital gallery.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="max-w-4xl mx-auto px-6 py-16 md:py-24 border-t border-soft-charcoal/10">
+            <div class="text-center mb-12 scroll-reveal">
+                <span class="text-xs uppercase tracking-[0.3em] text-muted-gold block mb-2">Common Inquiries</span>
+                <h2 class="text-2xl md:text-3xl font-editorial text-deep-forest">Frequently Asked Questions</h2>
+            </div>
+
+            <div class="space-y-6 md:space-y-8">
+                <div class="scroll-reveal border-b border-soft-charcoal/5 pb-4">
+                    <h3 class="text-sm font-semibold uppercase tracking-wider text-deep-forest mb-2">What should we wear to our session?</h3>
+                    <p class="text-sm text-soft-charcoal/70 font-light leading-relaxed">
+                        We highly recommend coordinating textures and earth tones rather than perfectly matching outfits. Avoid massive graphic logos or hyper-vibrant neon hues, as classic, neutral tones preserve beautifully across generations.
+                    </p>
+                </div>
+
+                <div class="scroll-reveal border-b border-soft-charcoal/5 pb-4">
+                    <h3 class="text-sm font-semibold uppercase tracking-wider text-deep-forest mb-2">How long does it take to get our images back?</h3>
+                    <p class="text-sm text-soft-charcoal/70 font-light leading-relaxed">
+                        A complete, curated digital proofing gallery is typically delivered directly to your inbox within three to four weeks of your session date. 
+                    </p>
+                </div>
+
+                <div class="scroll-reveal border-b border-soft-charcoal/5 pb-4">
+                    <h3 class="text-sm font-semibold uppercase tracking-wider text-deep-forest mb-2">Can we choose our own shoot location?</h3>
+                    <p class="text-sm text-soft-charcoal/70 font-light leading-relaxed">
+                        Absolutely. During our upfront creative consultation, we'll match your session vision against a customized list of scouted natural spaces, urban architectural overlooks, or private homestead configurations.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-warm-linen border-t border-soft-charcoal/10 py-16 text-center">
+        <div class="max-w-4xl mx-auto px-6 flex flex-col items-center gap-8">
+            <span class="text-xs uppercase tracking-[0.3em] text-muted-gold font-semibold">Reserve Your Timeline</span>
+            <h2 class="text-2xl md:text-3xl font-editorial text-deep-forest font-light italic">Ready to experience portraiture differently?</h2>
+            
+            <a href="../Contact/index.html" class="px-8 py-3.5 bg-deep-forest text-white hover:bg-muted-gold transition-colors duration-500 rounded-sm font-medium tracking-widest uppercase text-xs shadow-md">
+                Inquire With Dave
+            </a>
+
+            <div class="flex flex-wrap justify-center gap-x-6 gap-y-3 mt-4 text-xs font-medium tracking-widest uppercase text-soft-charcoal/50 border-t border-soft-charcoal/5 pt-10 w-full">
+                <a href="../index.html" class="hover:text-deep-forest transition-colors duration-300">Home</a>
+                <a href="../Portfolio/index.html" class="hover:text-deep-forest transition-colors duration-300">Portfolio</a>
+                <a href="index.html" class="hover:text-deep-forest transition-colors duration-300 text-deep-forest font-semibold">The Experience</a>
+                <a href="../About/index.html" class="hover:text-deep-forest transition-colors duration-300">About Dave</a>
+                <a href="../Contact/index.html" class="hover:text-deep-forest transition-colors duration-300">Contact Studio</a>
+            </div>
+            
+            <p class="text-[10px] tracking-widest text-soft-charcoal/40 uppercase">© 2026 McKay Photography. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuOverlay = document.getElementById('menu-overlay');
+            const barTop = document.getElementById('bar-top');
+            const barMid = document.getElementById('bar-mid');
+            const barBot = document.getElementById('bar-bot');
+
+            function toggleMenu() {
+                const isOpen = mobileMenu.classList.contains('opacity-100');
+                if (isOpen) {
+                    // Close Process
+                    mobileMenu.classList.remove('opacity-100', 'pointer-events-auto', 'translate-y-0');
+                    mobileMenu.classList.add('opacity-0', 'pointer-events-none', '-translate-y-4');
+                    menuOverlay.classList.remove('opacity-100', 'pointer-events-auto');
+                    menuOverlay.classList.add('opacity-0', 'pointer-events-none');
+                    document.body.classList.remove('overflow-hidden');
+                    
+                    barTop.classList.remove('rotate-45', 'translate-x-[2px]', 'translate-y-[1px]');
+                    barMid.classList.remove('opacity-0');
+                    barBot.classList.remove('-rotate-45', 'translate-x-[2px]', 'translate-y-[-1px]');
+                } else {
+                    // Open Process
+                    mobileMenu.classList.remove('opacity-0', 'pointer-events-none', '-translate-y-4');
+                    mobileMenu.classList.add('opacity-100', 'pointer-events-auto', 'translate-y-0');
+                    menuOverlay.classList.remove('opacity-0', 'pointer-events-none');
+                    menuOverlay.classList.add('opacity-100', 'pointer-events-auto');
+                    document.body.classList.add('overflow-hidden');
+                    
+                    barTop.classList.add('rotate-45', 'translate-x-[2px]', 'translate-y-[1px]');
+                    barMid.classList.add('opacity-0');
+                    barBot.classList.add('-rotate-45', 'translate-x-[2px]', 'translate-y-[1px]');
+                }
+            }
+
+            menuBtn.addEventListener('click', toggleMenu);
+            menuOverlay.addEventListener('click', toggleMenu);
+            
+            document.querySelectorAll('.mobile-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (mobileMenu.classList.contains('opacity-100')) toggleMenu();
+                });
+            });
+
+            const revealElements = document.querySelectorAll('.scroll-reveal');
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.02 });
+
+            revealElements.forEach(el => revealObserver.observe(el));
+        });
+    </script>
+</body>
+</html>
