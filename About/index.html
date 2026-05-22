@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Dave | McKay Photography</title>
+    <title>About Dave | McKay Photography | Stories & Legacies</title>
     <meta name="description" content="Meet Dave McKay, the storyteller behind the lens. Discover his devotion to authentic family archives, timeless portraits, and honest human connection.">
     
     <meta property="og:title" content="About Dave | McKay Photography">
@@ -51,13 +51,14 @@
 
     <header class="fixed top-0 left-0 w-full backdrop-blur-md bg-deep-forest/90 border-b border-white/5 z-50">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center relative z-50 bg-deep-forest/10">
-            <a href="../index.html" class="text-lg sm:text-xl font-editorial tracking-[0.2em] font-medium text-white">McKAY PHOTOGRAPHY</a>
+            <a href="../" class="text-lg sm:text-xl font-editorial tracking-[0.2em] font-medium text-white">McKAY PHOTOGRAPHY</a>
             
+            <!-- Desktop Navigation Links (Corrected for Subfolder Level) -->
             <ul class="hidden md:flex space-x-8 text-xs font-medium tracking-[0.25em] uppercase text-white/80">
                 <li><a href="../" class="hover:text-white transition-colors duration-300">Home</a></li>
                 <li><a href="../Portfolio/" class="hover:text-white transition-colors duration-300">Portfolio</a></li>
                 <li><a href="../Experience/" class="hover:text-white transition-colors duration-300">The Experience</a></li>
-                <li><a href="index.html" class="text-white border-b border-white/40 pb-1">About Dave</a></li>
+                <li><a href="./" class="text-white border-b border-white/40 pb-1">About Dave</a></li>
                 <li><a href="../Contact/" class="hover:text-white transition-colors duration-300">Contact</a></li>
             </ul>
 
@@ -70,12 +71,13 @@
             </button>
         </nav>
 
+        <!-- Mobile Dropdown Menu (Corrected for Subfolder Level) -->
         <div id="mobile-menu" class="absolute top-full left-0 w-full bg-deep-forest/95 backdrop-blur-lg border-b border-white/5 opacity-0 pointer-events-none transform -translate-y-4 transition-all duration-300 ease-out z-40 shadow-xl">
             <ul class="flex flex-col space-y-5 px-6 py-8 text-left text-sm font-medium tracking-[0.25em] uppercase text-white/90">
                 <li><a href="../" class="mobile-link py-1.5 block border-b border-white/5 hover:text-muted-gold transition-colors">Home</a></li>
                 <li><a href="../Portfolio/" class="mobile-link py-1.5 block border-b border-white/5 hover:text-muted-gold transition-colors">Portfolio</a></li>
                 <li><a href="../Experience/" class="mobile-link py-1.5 block border-b border-white/5 hover:text-muted-gold transition-colors">The Experience</a></li>
-                <li><a href="index.html" class="mobile-link py-1.5 block border-b border-white/5 text-muted-gold font-bold tracking-[0.3em]">About Dave</a></li>
+                <li><a href="./" class="mobile-link py-1.5 block border-b border-white/5 text-muted-gold font-bold tracking-[0.3em]">About Dave</a></li>
                 <li><a href="../Contact/" class="mobile-link py-1.5 block hover:text-muted-gold transition-colors">Contact</a></li>
             </ul>
         </div>
@@ -143,16 +145,17 @@
             <span class="text-xs uppercase tracking-[0.3em] text-muted-gold font-semibold">McKay Photography</span>
             <h2 class="text-2xl font-editorial text-deep-forest font-light italic">Let's craft your archive.</h2>
             
-            <a href="../Contact/index.html" class="px-8 py-3.5 bg-deep-forest text-white hover:bg-muted-gold transition-colors duration-500 rounded-sm font-medium tracking-widest uppercase text-xs shadow-md">
+            <a href="../Contact/" class="px-8 py-3.5 bg-deep-forest text-white hover:bg-muted-gold transition-colors duration-500 rounded-sm font-medium tracking-widest uppercase text-xs shadow-md">
                 Connect With Dave
             </a>
 
+            <!-- Footer Navigation Menu (Corrected for Subfolder Level) -->
             <div class="flex flex-wrap justify-center gap-x-6 gap-y-3 mt-4 text-xs font-medium tracking-widest uppercase text-soft-charcoal/50 border-t border-soft-charcoal/5 pt-10 w-full">
-                <a href="../index.html" class="hover:text-deep-forest transition-colors duration-300">Home</a>
-                <a href="../Portfolio/index.html" class="hover:text-deep-forest transition-colors duration-300">Portfolio</a>
-                <a href="../Experience/index.html" class="hover:text-deep-forest transition-colors duration-300">The Experience</a>
-                <a href="index.html" class="hover:text-deep-forest transition-colors duration-300 text-deep-forest font-semibold">About Dave</a>
-                <a href="../Contact/index.html" class="hover:text-deep-forest transition-colors duration-300">Contact Studio</a>
+                <a href="../" class="hover:text-deep-forest transition-colors duration-300">Home</a>
+                <a href="../Portfolio/" class="hover:text-deep-forest transition-colors duration-300">Portfolio</a>
+                <a href="../Experience/" class="hover:text-deep-forest transition-colors duration-300">The Experience</a>
+                <a href="./" class="hover:text-deep-forest transition-colors duration-300 text-deep-forest font-semibold">About Dave</a>
+                <a href="../Contact/" class="hover:text-deep-forest transition-colors duration-300">Contact Studio</a>
             </div>
             
             <p class="text-[10px] tracking-widest text-soft-charcoal/40 uppercase">© 2026 McKay Photography. All rights reserved.</p>
@@ -179,7 +182,7 @@
                     
                     barTop.classList.remove('rotate-45', 'translate-x-[2px]', 'translate-y-[1px]');
                     barMid.classList.remove('opacity-0');
-                    barBot.classList.remove('-rotate-45', 'translate-x-[2px]', 'translate-y-[-1px]');
+                    barBot.classList.remove('-rotate-45', 'translate-x-[2px]', 'translate-y-[1px]');
                 } else {
                     mobileMenu.classList.remove('opacity-0', 'pointer-events-none', '-translate-y-4');
                     mobileMenu.classList.add('opacity-100', 'pointer-events-auto', 'translate-y-0');
