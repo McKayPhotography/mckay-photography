@@ -6,6 +6,10 @@
     <title>Portfolio | McKay Photography | Stories & Legacies</title>
     <meta name="description" content="Explore selected portrait sessions by McKay Photography. Read the brief stories behind the frames of our high school seniors, family legacy gatherings, and lifestyle sessions.">
     
+    <!-- Favicon Assets -->
+    <link rel="icon" type="image/png" href="../images/myicon.png">
+    <link class="apple-touch-icon" href="../images/apple-touch-icon.png">
+
     <meta property="og:title" content="Portfolio | McKay Photography">
     <meta property="og:description" content="A collection of honest, timeless portrait sessions and the unique stories behind them.">
     <meta property="og:type" content="website">
@@ -51,11 +55,12 @@
 </head>
 <body class="bg-warm-linen text-soft-charcoal font-sans antialiased">
 
+    <!-- Global Header Navigation Wrapper -->
     <header class="fixed top-0 left-0 w-full backdrop-blur-md bg-warm-linen/80 border-b border-soft-charcoal/5 z-50">
         <nav class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center relative z-50 bg-warm-linen/10">
             <a href="../" class="text-xl md:text-2xl font-editorial tracking-[0.2em] font-medium text-deep-forest">McKAY PHOTOGRAPHY</a>
             
-            <!-- Desktop Navigation Links (Corrected for Subfolder Level) -->
+            <!-- Desktop Navigation Links -->
             <ul class="hidden md:flex space-x-10 text-xs font-medium tracking-[0.25em] uppercase text-soft-charcoal/80">
                 <li><a href="../" class="transition-colors duration-300 hover:text-deep-forest">Home</a></li>
                 <li><a href="./" class="text-deep-forest border-b border-deep-forest/40 pb-1">Portfolio</a></li>
@@ -64,6 +69,7 @@
                 <li><a href="../Contact/" class="transition-colors duration-300 hover:text-deep-forest">Contact</a></li>
             </ul>
 
+            <!-- Mobile Menu Burger Target Container (Matches Home Exactly) -->
             <button id="menu-btn" class="flex md:hidden items-center justify-center w-12 h-12 text-deep-forest focus:outline-none" aria-label="Toggle Navigation Menu">
                 <div class="w-6 h-5 flex flex-col justify-between relative transform transition-all duration-300">
                     <span id="bar-top" class="w-full h-[1.5px] bg-deep-forest transform transition-all duration-300 origin-left"></span>
@@ -73,8 +79,8 @@
             </button>
         </nav>
 
-        <!-- Mobile Dropdown Menu (Corrected for Subfolder Level) -->
-        <div id="mobile-menu" class="absolute top-full left-0 w-full bg-deep-forest/95 backdrop-blur-lg border-b border-white/5 opacity-0 pointer-events-none transform -translate-y-4 transition-all duration-300 ease-out z-40 shadow-xl md:hidden">
+        <!-- Dropdown Menu Box -->
+        <div id="mobile-menu" class="absolute top-full left-0 w-full bg-deep-forest/95 backdrop-blur-lg border-b border-white/5 opacity-0 pointer-events-none transform translate-y-2 transition-all duration-300 ease-out z-40 shadow-xl md:hidden">
             <ul class="flex flex-col space-y-5 px-6 py-8 text-left text-sm font-medium tracking-[0.25em] uppercase text-white/90">
                 <li><a href="../" class="mobile-link py-1.5 block border-b border-white/5 hover:text-muted-gold transition-colors">Home</a></li>
                 <li><a href="./" class="mobile-link py-1.5 block border-b border-white/5 text-muted-gold font-bold tracking-[0.3em]">Portfolio</a></li>
@@ -83,8 +89,6 @@
                 <li><a href="../Contact/" class="mobile-link py-1.5 block hover:text-muted-gold transition-colors">Contact</a></li>
             </ul>
         </div>
-
-        <div id="menu-overlay" class="fixed inset-0 bg-soft-charcoal/40 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 ease-in-out z-30 md:hidden"></div>
     </header>
 
     <main class="pt-24 pb-12">
@@ -111,35 +115,31 @@
 
                 <div class="lg:col-span-8">
                     <div class="relative overflow-hidden w-full">
-                        <!-- Soft Gradient Vignette Overlays -->
                         <div class="absolute left-0 top-0 bottom-0 w-16 md:w-40 bg-gradient-to-r from-warm-linen via-warm-linen/40 to-transparent z-10 pointer-events-none"></div>
                         <div class="absolute right-0 top-0 bottom-0 w-16 md:w-40 bg-gradient-to-l from-warm-linen via-warm-linen/40 to-transparent z-10 pointer-events-none"></div>
 
                         <!-- Fluid Drag Carousel Track -->
                         <div id="carousel-clara" class="drag-carousel flex overflow-x-auto hide-scrollbar gap-8 items-center cursor-grab active:cursor-grabbing select-none py-2">
-                            <!-- Left Structural Air Buffer -->
                             <div class="shrink-0 w-[30vw] md:w-[35vw] h-4 pointer-events-none"></div>
                             
-                            <!-- Gallery Assets -->
-                            <div class="carousel-item shrink-0 h-[350px] md:h-[450px] w-auto bg-stone-100 rounded-sm overflow-hidden shadow-sm">
+                            <!-- Mobile height optimized to 260px -->
+                            <div class="carousel-item shrink-0 h-[260px] md:h-[450px] w-auto bg-stone-100 rounded-sm overflow-hidden shadow-sm">
                                 <img src="../images/Morgan2.jpg" alt="Clara senior portrait" class="h-full w-auto object-contain pointer-events-none">
                             </div>
-                            <div class="carousel-item shrink-0 h-[350px] md:h-[450px] w-auto bg-stone-100 rounded-sm overflow-hidden shadow-sm">
+                            <div class="carousel-item shrink-0 h-[260px] md:h-[450px] w-auto bg-stone-100 rounded-sm overflow-hidden shadow-sm">
                                 <img src="../images/Morgan1.jpg" loading="lazy" alt="Clara senior portrait slide 2" class="h-full w-auto object-contain pointer-events-none">
                             </div>
-                            <div class="carousel-item shrink-0 h-[350px] md:h-[450px] w-auto bg-stone-100 rounded-sm overflow-hidden shadow-sm">
+                            <div class="carousel-item shrink-0 h-[260px] md:h-[450px] w-auto bg-stone-100 rounded-sm overflow-hidden shadow-sm">
                                 <img src="../images/Morgan4.jpg" loading="lazy" alt="Clara senior portrait slide 3" class="h-full w-auto object-contain pointer-events-none">
                             </div>
-                            <div class="carousel-item shrink-0 h-[350px] md:h-[450px] w-auto bg-stone-100 rounded-sm overflow-hidden shadow-sm">
+                            <div class="carousel-item shrink-0 h-[260px] md:h-[450px] w-auto bg-stone-100 rounded-sm overflow-hidden shadow-sm">
                                 <img src="../images/Morgan3.jpg" loading="lazy" alt="Clara senior portrait slide 3" class="h-full w-auto object-contain pointer-events-none">
                             </div>
 
-                            <!-- Right Structural Air Buffer -->
                             <div class="shrink-0 w-[30vw] md:w-[35vw] h-4 pointer-events-none"></div>
                         </div>
                     </div>
 
-                    <!-- Clean Typographic Interaction Block Outside Mask Boundaries -->
                     <div class="flex items-center justify-between mt-6 border-t border-soft-charcoal/5 pt-4">
                         <span class="text-[10px] tracking-[0.2em] uppercase text-soft-charcoal/40 font-medium font-sans hidden sm:inline-block">Drag frame or explore with directions</span>
                         <div class="flex gap-8 text-[11px] tracking-[0.25em] uppercase font-semibold text-soft-charcoal/70 ml-auto">
@@ -173,32 +173,28 @@
 
                 <div class="lg:col-span-8">
                     <div class="relative overflow-hidden w-full">
-                        <!-- Soft Gradient Vignette Overlays -->
                         <div class="absolute left-0 top-0 bottom-0 w-16 md:w-40 bg-gradient-to-r from-warm-linen via-warm-linen/40 to-transparent z-10 pointer-events-none"></div>
                         <div class="absolute right-0 top-0 bottom-0 w-16 md:w-40 bg-gradient-to-l from-warm-linen via-warm-linen/40 to-transparent z-10 pointer-events-none"></div>
 
                         <!-- Fluid Drag Carousel Track -->
                         <div id="carousel-arrington" class="drag-carousel flex overflow-x-auto hide-scrollbar gap-8 items-center cursor-grab active:cursor-grabbing select-none py-2">
-                            <!-- Left Structural Air Buffer -->
                             <div class="shrink-0 w-[30vw] md:w-[35vw] h-4 pointer-events-none"></div>
                             
-                            <!-- Gallery Assets -->
-                            <div class="carousel-item shrink-0 h-[350px] md:h-[450px] w-auto bg-stone-100 rounded-sm overflow-hidden shadow-sm">
+                            <!-- Mobile height optimized to 260px -->
+                            <div class="carousel-item shrink-0 h-[260px] md:h-[450px] w-auto bg-stone-100 rounded-sm overflow-hidden shadow-sm">
                                 <img src="../images/Atterbury1.jpg" alt="Arrington family legacy" class="h-full w-auto object-contain pointer-events-none">
                             </div>
-                            <div class="carousel-item shrink-0 h-[350px] md:h-[450px] w-auto bg-stone-100 rounded-sm overflow-hidden shadow-sm">
+                            <div class="carousel-item shrink-0 h-[260px] md:h-[450px] w-auto bg-stone-100 rounded-sm overflow-hidden shadow-sm">
                                 <img src="../images/Atterbury2.jpg" loading="lazy" alt="Arrington family slide 2" class="h-full w-auto object-contain pointer-events-none">
                             </div>
-                            <div class="carousel-item shrink-0 h-[350px] md:h-[450px] w-auto bg-stone-100 rounded-sm overflow-hidden shadow-sm">
+                            <div class="carousel-item shrink-0 h-[260px] md:h-[450px] w-auto bg-stone-100 rounded-sm overflow-hidden shadow-sm">
                                 <img src="../images/Atterbury3.jpg" loading="lazy" alt="Arrington family slide 2" class="h-full w-auto object-contain pointer-events-none">
                             </div>
 
-                            <!-- Right Structural Air Buffer -->
                             <div class="shrink-0 w-[30vw] md:w-[35vw] h-4 pointer-events-none"></div>
                         </div>
                     </div>
 
-                    <!-- Clean Typographic Interaction Block Outside Mask Boundaries -->
                     <div class="flex items-center justify-between mt-6 border-t border-soft-charcoal/5 pt-4">
                         <span class="text-[10px] tracking-[0.2em] uppercase text-soft-charcoal/40 font-medium font-sans hidden sm:inline-block">Drag frame or explore with directions</span>
                         <div class="flex gap-8 text-[11px] tracking-[0.25em] uppercase font-semibold text-soft-charcoal/70 mr-auto lg:mr-0 lg:ml-0">
@@ -224,7 +220,7 @@
                 Connect with Dave
             </a>
 
-            <!-- Footer Navigation Menu (Corrected for Subfolder Level) -->
+            <!-- Footer Navigation Menu -->
             <div class="flex flex-wrap justify-center gap-x-6 gap-y-3 mt-4 text-xs font-medium tracking-widest uppercase text-soft-charcoal/50 border-t border-soft-charcoal/5 pt-10 w-full">
                 <a href="../" class="hover:text-deep-forest transition-colors duration-300">Home</a>
                 <a href="./" class="hover:text-deep-forest transition-colors duration-300 text-deep-forest font-semibold">Portfolio</a>
@@ -237,9 +233,11 @@
         </div>
     </footer>
 
+    <!-- Premium Smooth Falloff Blurred Backdrop Overlay Scrim -->
+    <div id="menu-overlay" class="fixed inset-0 bg-soft-charcoal/40 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 ease-in-out z-30 md:hidden"></div>
+
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Navigation Bar Toggle Configuration
             const menuBtn = document.getElementById('menu-btn');
             const mobileMenu = document.getElementById('mobile-menu');
             const menuOverlay = document.getElementById('menu-overlay');
@@ -247,20 +245,21 @@
             const barMid = document.getElementById('bar-mid');
             const barBot = document.getElementById('bar-bot');
 
+            // Responsive Navigation Menu Control (Matches Homepage Exactly)
             function toggleMenu() {
                 const isOpen = mobileMenu.classList.contains('opacity-100');
                 if (isOpen) {
                     mobileMenu.classList.remove('opacity-100', 'pointer-events-auto', 'translate-y-0');
-                    mobileMenu.classList.add('opacity-0', 'pointer-events-none', '-translate-y-4');
+                    mobileMenu.classList.add('opacity-0', 'pointer-events-none', 'translate-y-2');
                     menuOverlay.classList.remove('opacity-100', 'pointer-events-auto');
                     menuOverlay.classList.add('opacity-0', 'pointer-events-none');
                     document.body.classList.remove('overflow-hidden');
                     
                     barTop.classList.remove('rotate-45', 'translate-x-[2px]', 'translate-y-[1px]');
                     barMid.classList.remove('opacity-0');
-                    barBot.classList.remove('-rotate-45', 'translate-x-[2px]', 'translate-y-[-1px]');
+                    barBot.classList.remove('-rotate-45', 'translate-x-[2px]', 'translate-y-[1px]');
                 } else {
-                    mobileMenu.classList.remove('opacity-0', 'pointer-events-none', '-translate-y-4');
+                    mobileMenu.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-2');
                     mobileMenu.classList.add('opacity-100', 'pointer-events-auto', 'translate-y-0');
                     menuOverlay.classList.remove('opacity-0', 'pointer-events-none');
                     menuOverlay.classList.add('opacity-100', 'pointer-events-auto');
@@ -294,7 +293,7 @@
 
             revealElements.forEach(el => revealObserver.observe(el));
 
-            // Premium Custom Eased Floating Scroll Engine
+            // Custom Eased Floating Scroll Engine
             function smoothFloatTo(element, targetScroll, duration = 750) {
                 if (duration === 0) {
                     element.scrollLeft = targetScroll;
@@ -311,8 +310,6 @@
                     if (!startTime) startTime = currentTime;
                     const elapsed = currentTime - startTime;
                     const progress = Math.min(elapsed / duration, 1);
-                    
-                    // Luxurious cubic ease-out curve for that true "floating" decelerating finish
                     const easeOutCubic = 1 - Math.pow(1 - progress, 3);
                     
                     element.scrollLeft = startScroll + change * easeOutCubic;
@@ -326,7 +323,6 @@
                 element.dataset.animId = requestAnimationFrame(animate);
             }
 
-            // Calculations for True Element-Based Centering & Clamping
             function getClosestItemIndex(carousel, items) {
                 const centerPoint = carousel.scrollLeft + (carousel.offsetWidth / 2);
                 let targetedIndex = 0;
@@ -343,7 +339,6 @@
                 return targetedIndex;
             }
 
-            // Center image items cleanly
             function floatToIndex(carousel, items, index, duration = 800) {
                 if (index < 0 || index >= items.length) return; 
                 
@@ -354,10 +349,8 @@
                 smoothFloatTo(carousel, optimalScrollLeft, duration);
             }
 
-            // Click-and-Drag Setup across Track nodes
             const carousels = document.querySelectorAll('.drag-carousel');
             
-            // Global Initialization function to perfectly center the first image item[0]
             function snapToFirstFrames(duration = 0) {
                 carousels.forEach(carousel => {
                     const items = carousel.querySelectorAll('.carousel-item');
@@ -367,10 +360,8 @@
                 });
             }
 
-            // Execute immediate initial snap alignment
             snapToFirstFrames(0);
             
-            // Re-verify layouts when assets load or window scaling shifts properties
             window.addEventListener('load', () => snapToFirstFrames(0));
             window.addEventListener('resize', () => snapToFirstFrames(0));
             
@@ -401,12 +392,12 @@
                     if (!isDragging) return;
                     e.preventDefault();
                     const currentX = e.pageX - carousel.offsetLeft;
-                    const deltaX = (currentX - startX) * 1.5; // Drag sensitivity constant
+                    const deltaX = (currentX - startX) * 1.5;
                     carousel.scrollLeft = baseScrollLeft - deltaX;
                 });
             });
 
-            // Clamped Typographic Navigation Triggers
+            // Navigation Triggers
             document.querySelectorAll('.nav-arrow').forEach(btn => {
                 btn.addEventListener('click', function() {
                     const trackId = this.getAttribute('data-target');
@@ -417,7 +408,6 @@
                     const activeIndex = getClosestItemIndex(carousel, items);
                     let destinationIndex = direction === 'next' ? activeIndex + 1 : activeIndex - 1;
                     
-                    // Stop execution at boundary limits to ensure no blank spaces appear
                     if (destinationIndex >= 0 && destinationIndex < items.length) {
                         floatToIndex(carousel, items, destinationIndex, 800);
                     }

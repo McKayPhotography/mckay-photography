@@ -7,7 +7,7 @@
     <meta name="description" content="Authentic portrait photography specializing in family legacies, high school seniors, and lifestyle milestones. Capturing honest moments with a timeless editorial touch.">
     
     <!-- Favicon Assets -->
-    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="icon" type="image/png" href="images/myicon.png">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 
     <!-- Global Cover Photo / Open Graph Meta Tags -->
@@ -90,7 +90,7 @@
         </nav>
 
         <!-- Dropdown Menu Box -->
-        <div id="mobile-menu" class="absolute top-full left-0 w-full bg-deep-forest/95 backdrop-blur-lg border-b border-white/5 opacity-0 pointer-events-none transform -translate-y-4 transition-all duration-300 ease-out z-40 shadow-xl md:hidden">
+        <div id="mobile-menu" class="absolute top-full left-0 w-full bg-deep-forest/95 backdrop-blur-lg border-b border-white/5 opacity-0 pointer-events-none transform translate-y-2 transition-all duration-300 ease-out z-40 shadow-xl md:hidden">
             <ul class="flex flex-col space-y-5 px-6 py-8 text-left text-sm font-medium tracking-[0.25em] uppercase text-white/90">
                 <li><a href="./" class="mobile-link py-1.5 block border-b border-white/5 text-muted-gold font-bold tracking-[0.3em]">Home</a></li>
                 <li><a href="Portfolio/" class="mobile-link py-1.5 block border-b border-white/5 hover:text-muted-gold transition-colors">Portfolio</a></li>
@@ -99,9 +99,6 @@
                 <li><a href="Contact/" class="mobile-link py-1.5 block hover:text-muted-gold transition-colors">Contact</a></li>
             </ul>
         </div>
-
-        <!-- Premium Smooth Falloff Blurred Backdrop Overlay Scrim -->
-        <div id="menu-overlay" class="fixed inset-0 bg-soft-charcoal/40 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 ease-in-out z-30 md:hidden"></div>
     </header>
 
     <main class="pt-16">
@@ -251,6 +248,9 @@
         </div>
     </footer>
 
+    <!-- Premium Smooth Falloff Blurred Backdrop Overlay Scrim (Placed here to avoid parent container layout constraints) -->
+    <div id="menu-overlay" class="fixed inset-0 bg-soft-charcoal/40 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 ease-in-out z-30 md:hidden"></div>
+
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const menuBtn = document.getElementById('menu-btn');
@@ -265,7 +265,7 @@
                 const isOpen = mobileMenu.classList.contains('opacity-100');
                 if (isOpen) {
                     mobileMenu.classList.remove('opacity-100', 'pointer-events-auto', 'translate-y-0');
-                    mobileMenu.classList.add('opacity-0', 'pointer-events-none', '-translate-y-4');
+                    mobileMenu.classList.add('opacity-0', 'pointer-events-none', 'translate-y-2');
                     menuOverlay.classList.remove('opacity-100', 'pointer-events-auto');
                     menuOverlay.classList.add('opacity-0', 'pointer-events-none');
                     document.body.classList.remove('overflow-hidden');
@@ -274,7 +274,7 @@
                     barMid.classList.remove('opacity-0');
                     barBot.classList.remove('-rotate-45', 'translate-x-[2px]', 'translate-y-[1px]');
                 } else {
-                    mobileMenu.classList.remove('opacity-0', 'pointer-events-none', '-translate-y-4');
+                    mobileMenu.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-2');
                     mobileMenu.classList.add('opacity-100', 'pointer-events-auto', 'translate-y-0');
                     menuOverlay.classList.remove('opacity-0', 'pointer-events-none');
                     menuOverlay.classList.add('opacity-100', 'pointer-events-auto');

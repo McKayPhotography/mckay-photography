@@ -6,6 +6,10 @@
     <title>The Experience | McKay Photography | Stories & Legacies</title>
     <meta name="description" content="Discover the intentional process behind a portrait session with McKay Photography. From creative consultation to final gallery curation, learn what to expect.">
     
+    <!-- Favicon Assets -->
+    <link rel="icon" type="image/png" href="../images/myicon.png">
+    <link class="apple-touch-icon" href="../images/apple-touch-icon.png">
+
     <meta property="og:title" content="The Experience | McKay Photography">
     <meta property="og:description" content="An unhurried, intentional approach to capturing your family legacy and milestones.">
     <meta property="og:type" content="website">
@@ -49,19 +53,21 @@
 </head>
 <body class="bg-warm-linen text-soft-charcoal font-sans antialiased">
 
-    <header class="fixed top-0 left-0 w-full backdrop-blur-md bg-warm-linen/90 border-b border-soft-charcoal/5 z-50">
-        <nav class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center relative z-50 bg-warm-linen/10">
-            <a href="../" class="text-lg sm:text-xl font-editorial tracking-[0.2em] font-medium text-deep-forest">McKAY PHOTOGRAPHY</a>
+    <!-- Global Header Navigation Wrapper -->
+    <header class="fixed top-0 left-0 w-full backdrop-blur-md bg-warm-linen/80 border-b border-soft-charcoal/5 z-50">
+        <nav class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center relative z-50 bg-warm-linen/10">
+            <a href="../" class="text-xl md:text-2xl font-editorial tracking-[0.2em] font-medium text-deep-forest">McKAY PHOTOGRAPHY</a>
             
-            <!-- Desktop Navigation Links (Corrected for Subfolder Level) -->
-            <ul class="hidden md:flex space-x-8 text-xs font-medium tracking-[0.25em] uppercase text-soft-charcoal/80">
-                <li><a href="../" class="hover:text-deep-forest transition-colors duration-300">Home</a></li>
-                <li><a href="../Portfolio/" class="hover:text-deep-forest transition-colors duration-300">Portfolio</a></li>
+            <!-- Desktop Navigation Links -->
+            <ul class="hidden md:flex space-x-10 text-xs font-medium tracking-[0.25em] uppercase text-soft-charcoal/80">
+                <li><a href="../" class="transition-colors duration-300 hover:text-deep-forest">Home</a></li>
+                <li><a href="../Portfolio/" class="transition-colors duration-300 hover:text-deep-forest">Portfolio</a></li>
                 <li><a href="./" class="text-deep-forest border-b border-deep-forest/40 pb-1">The Experience</a></li>
-                <li><a href="../About/" class="hover:text-deep-forest transition-colors duration-300">About Dave</a></li>
-                <li><a href="../Contact/" class="hover:text-deep-forest transition-colors duration-300">Contact</a></li>
+                <li><a href="../About/" class="transition-colors duration-300 hover:text-deep-forest">About Dave</a></li>
+                <li><a href="../Contact/" class="transition-colors duration-300 hover:text-deep-forest">Contact</a></li>
             </ul>
 
+            <!-- Mobile Menu Burger Target Container (Matches Home Exactly) -->
             <button id="menu-btn" class="flex md:hidden items-center justify-center w-12 h-12 text-deep-forest focus:outline-none" aria-label="Toggle Navigation Menu">
                 <div class="w-6 h-5 flex flex-col justify-between relative transform transition-all duration-300">
                     <span id="bar-top" class="w-full h-[1.5px] bg-deep-forest transform transition-all duration-300 origin-left"></span>
@@ -71,8 +77,8 @@
             </button>
         </nav>
 
-        <!-- Mobile Dropdown Menu (Corrected for Subfolder Level) -->
-        <div id="mobile-menu" class="absolute top-full left-0 w-full bg-deep-forest/95 backdrop-blur-lg border-b border-white/5 opacity-0 pointer-events-none transform -translate-y-4 transition-all duration-300 ease-out z-40 shadow-xl">
+        <!-- Dropdown Menu Box -->
+        <div id="mobile-menu" class="absolute top-full left-0 w-full bg-deep-forest/95 backdrop-blur-lg border-b border-white/5 opacity-0 pointer-events-none transform translate-y-2 transition-all duration-300 ease-out z-40 shadow-xl md:hidden">
             <ul class="flex flex-col space-y-5 px-6 py-8 text-left text-sm font-medium tracking-[0.25em] uppercase text-white/90">
                 <li><a href="../" class="mobile-link py-1.5 block border-b border-white/5 hover:text-muted-gold transition-colors">Home</a></li>
                 <li><a href="../Portfolio/" class="mobile-link py-1.5 block border-b border-white/5 hover:text-muted-gold transition-colors">Portfolio</a></li>
@@ -81,8 +87,6 @@
                 <li><a href="../Contact/" class="mobile-link py-1.5 block hover:text-muted-gold transition-colors">Contact</a></li>
             </ul>
         </div>
-
-        <div id="menu-overlay" class="fixed inset-0 top-[60px] h-[calc(100vh-60px)] w-screen bg-soft-charcoal/40 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 ease-in-out z-30"></div>
     </header>
 
     <main class="pt-24 pb-12">
@@ -179,7 +183,7 @@
                 Inquire With Dave
             </a>
 
-            <!-- Footer Navigation Menu (Corrected for Subfolder Level) -->
+            <!-- Footer Navigation Menu -->
             <div class="flex flex-wrap justify-center gap-x-6 gap-y-3 mt-4 text-xs font-medium tracking-widest uppercase text-soft-charcoal/50 border-t border-soft-charcoal/5 pt-10 w-full">
                 <a href="../" class="hover:text-deep-forest transition-colors duration-300">Home</a>
                 <a href="../Portfolio/" class="hover:text-deep-forest transition-colors duration-300">Portfolio</a>
@@ -192,6 +196,9 @@
         </div>
     </footer>
 
+    <!-- Premium Smooth Falloff Blurred Backdrop Overlay Scrim -->
+    <div id="menu-overlay" class="fixed inset-0 bg-soft-charcoal/40 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 ease-in-out z-30 md:hidden"></div>
+
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const menuBtn = document.getElementById('menu-btn');
@@ -201,12 +208,12 @@
             const barMid = document.getElementById('bar-mid');
             const barBot = document.getElementById('bar-bot');
 
+            // Responsive Navigation Menu Control (Matches Homepage Exactly)
             function toggleMenu() {
                 const isOpen = mobileMenu.classList.contains('opacity-100');
                 if (isOpen) {
-                    // Close Process
                     mobileMenu.classList.remove('opacity-100', 'pointer-events-auto', 'translate-y-0');
-                    mobileMenu.classList.add('opacity-0', 'pointer-events-none', '-translate-y-4');
+                    mobileMenu.classList.add('opacity-0', 'pointer-events-none', 'translate-y-2');
                     menuOverlay.classList.remove('opacity-100', 'pointer-events-auto');
                     menuOverlay.classList.add('opacity-0', 'pointer-events-none');
                     document.body.classList.remove('overflow-hidden');
@@ -215,8 +222,7 @@
                     barMid.classList.remove('opacity-0');
                     barBot.classList.remove('-rotate-45', 'translate-x-[2px]', 'translate-y-[1px]');
                 } else {
-                    // Open Process
-                    mobileMenu.classList.remove('opacity-0', 'pointer-events-none', '-translate-y-4');
+                    mobileMenu.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-2');
                     mobileMenu.classList.add('opacity-100', 'pointer-events-auto', 'translate-y-0');
                     menuOverlay.classList.remove('opacity-0', 'pointer-events-none');
                     menuOverlay.classList.add('opacity-100', 'pointer-events-auto');
@@ -237,6 +243,7 @@
                 });
             });
 
+            // Scroll Layer Reveal Engine
             const revealElements = document.querySelectorAll('.scroll-reveal');
             const revealObserver = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
