@@ -3,13 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>McKay Photography | Timeless Portraiture & Legacy Storytelling</title>
+    <title>McKay Photography</title>
     <meta name="description" content="Authentic portrait photography specializing in family legacies, high school seniors, and lifestyle milestones. Capturing honest moments with a timeless editorial touch.">
     
+    <!-- Favicon Assets -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <!-- Global Cover Photo / Open Graph Meta Tags -->
     <meta property="og:title" content="McKay Photography | Timeless Portraiture">
     <meta property="og:description" content="Capturing honest moments and family legacies with an editorial, timeless touch.">
-    <meta property="og:image" content="/mckay-photography/images/family_featured.jpg">
+    <meta property="og:image" content="images/cover-photo.jpg">
     <meta property="og:type" content="website">
+    
+    <!-- Twitter Specific Cover Photo Card Rules -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="images/cover-photo.jpg">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -61,7 +70,7 @@
         <nav class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center relative z-50 bg-warm-linen/10">
             <a href="./" class="text-xl md:text-2xl font-editorial tracking-[0.2em] font-medium text-deep-forest">McKAY PHOTOGRAPHY</a>
             
-            <!-- Desktop Navigation Links (Corrected for Root Level) -->
+            <!-- Desktop Navigation Links -->
             <ul class="hidden md:flex space-x-10 text-xs font-medium tracking-[0.25em] uppercase text-soft-charcoal/80">
                 <li><a href="./" class="text-deep-forest border-b border-deep-forest/40 pb-1">Home</a></li>
                 <li><a href="Portfolio/" class="transition-colors duration-300 hover:text-deep-forest">Portfolio</a></li>
@@ -80,7 +89,7 @@
             </button>
         </nav>
 
-        <!-- Dropdown Menu Box (Corrected for Root Level) -->
+        <!-- Dropdown Menu Box -->
         <div id="mobile-menu" class="absolute top-full left-0 w-full bg-deep-forest/95 backdrop-blur-lg border-b border-white/5 opacity-0 pointer-events-none transform -translate-y-4 transition-all duration-300 ease-out z-40 shadow-xl md:hidden">
             <ul class="flex flex-col space-y-5 px-6 py-8 text-left text-sm font-medium tracking-[0.25em] uppercase text-white/90">
                 <li><a href="./" class="mobile-link py-1.5 block border-b border-white/5 text-muted-gold font-bold tracking-[0.3em]">Home</a></li>
@@ -96,15 +105,25 @@
     </header>
 
     <main class="pt-16">
-        <!-- Hero Section with Smooth Fading Multi-Image Carousel Background -->
+        <!-- Hero Section with Responsive Image Carousel Layers -->
         <section class="h-[92vh] flex items-center relative overflow-hidden bg-deep-forest">
             
-            <!-- Carousel Image Layers -->
             <div class="absolute inset-0 z-0">
-                <div class="hero-slide absolute inset-0 bg-cover bg-center opacity-70 scale-105 transition-all duration-1000 ease-out" id="hero-image" style="background-image: url('images/Sophie1.jpg')"></div>
-                <div class="hero-slide absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-1000 ease-in-out" style="background-image: url('images/Stanley2.jpeg')"></div>
-                <div class="hero-slide absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-1000 ease-in-out" style="background-image: url('images/Kenzie1.JPG')"></div>
-                <div class="hero-slide absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-1000 ease-in-out" style="background-image: url('images/Grandma1.jpg')"></div>
+                <!-- Desktop Hero Slides (Visible on md screens and above) -->
+                <div class="desktop-slides hidden md:block absolute inset-0">
+                    <div class="hero-slide absolute inset-0 bg-cover bg-center opacity-70 scale-105 transition-all duration-1000 ease-out" id="hero-image" style="background-image: url('images/Sophie1.jpg')"></div>
+                    <div class="hero-slide absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-1000 ease-in-out" style="background-image: url('images/Stanley2.jpeg')"></div>
+                    <div class="hero-slide absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-1000 ease-in-out" style="background-image: url('images/Kenzie1.JPG')"></div>
+                    <div class="hero-slide absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-1000 ease-in-out" style="background-image: url('images/Grandma1.jpg')"></div>
+                </div>
+
+                <!-- Mobile Hero Slides (Visible on mobile/tablet, hidden on md screens) -->
+                <div class="mobile-slides block md:hidden absolute inset-0">
+                    <div class="hero-slide absolute inset-0 bg-cover bg-center opacity-70 scale-105 transition-all duration-1000 ease-out" id="hero-mobile-image" style="background-image: url('images/Sophie1_mobile.jpg')"></div>
+                    <div class="hero-slide absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-1000 ease-in-out" style="background-image: url('images/Stanley2_mobile.jpg')"></div>
+                    <div class="hero-slide absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-1000 ease-in-out" style="background-image: url('images/Kenzie1_mobile.jpg')"></div>
+                    <div class="hero-slide absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-1000 ease-in-out" style="background-image: url('images/Grandma1_mobile.jpg')"></div>
+                </div>
             </div>
 
             <!-- Ambient Deep Directional Vignette Overlay -->
@@ -219,7 +238,7 @@
                 Inquire & Secure Dates
             </a>
 
-            <!-- Footer Navigation Menu (Corrected for Root Level) -->
+            <!-- Footer Navigation Menu -->
             <div class="flex flex-wrap justify-center gap-x-6 gap-y-3 mt-6 text-xs font-medium tracking-widest uppercase text-soft-charcoal/50 border-t border-soft-charcoal/5 pt-10 w-full">
                 <a href="./" class="hover:text-deep-forest transition-colors duration-300">Home</a>
                 <a href="Portfolio/" class="hover:text-deep-forest transition-colors duration-300">Portfolio</a>
@@ -279,26 +298,42 @@
             // Initial Landing Page Zoom Reveal Animation
             setTimeout(() => {
                 const heroImg = document.getElementById('hero-image');
+                const heroMobileImg = document.getElementById('hero-mobile-image');
                 if(heroImg) heroImg.classList.remove('scale-105');
+                if(heroMobileImg) heroMobileImg.classList.remove('scale-105');
             }, 150);
 
-            // Ambient Header Image Carousel System
-            const slides = document.querySelectorAll('.hero-slide');
+            // Responsive Unified Carousel Script
+            const desktopSlides = document.querySelectorAll('.desktop-slides .hero-slide');
+            const mobileSlides = document.querySelectorAll('.mobile-slides .hero-slide');
             let currentSlide = 0;
 
-            if (slides.length > 0) {
+            if (desktopSlides.length > 0 || mobileSlides.length > 0) {
                 setInterval(() => {
-                    // Smooth cross-fade exit
-                    slides[currentSlide].classList.remove('opacity-100');
-                    slides[currentSlide].classList.add('opacity-0');
+                    const nextSlide = (currentSlide + 1) % 4;
 
-                    // Compute cycle target index
-                    currentSlide = (currentSlide + 1) % slides.length;
+                    // Transition Desktop Layer
+                    if (desktopSlides[currentSlide]) {
+                        desktopSlides[currentSlide].classList.remove('opacity-70', 'opacity-100');
+                        desktopSlides[currentSlide].classList.add('opacity-0');
+                    }
+                    if (desktopSlides[nextSlide]) {
+                        desktopSlides[nextSlide].classList.remove('opacity-0');
+                        desktopSlides[nextSlide].classList.add('opacity-70');
+                    }
 
-                    // Smooth cross-fade entry
-                    slides[currentSlide].classList.remove('opacity-0');
-                    slides[currentSlide].classList.add('opacity-100');
-                }, 6000); // Evaluates cleanly every 6 seconds
+                    // Transition Mobile Layer
+                    if (mobileSlides[currentSlide]) {
+                        mobileSlides[currentSlide].classList.remove('opacity-70', 'opacity-100');
+                        mobileSlides[currentSlide].classList.add('opacity-0');
+                    }
+                    if (mobileSlides[nextSlide]) {
+                        mobileSlides[nextSlide].classList.remove('opacity-0');
+                        mobileSlides[nextSlide].classList.add('opacity-70');
+                    }
+
+                    currentSlide = nextSlide;
+                }, 6000); // Transitions evenly every 6 seconds
             }
 
             // Scroll Layer Reveal Observers
